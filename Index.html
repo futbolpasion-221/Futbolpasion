@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fútbol: Pasión y Historia</title>
+  <style>
+    body{font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; line-height:1.6; color:#111; margin:0; background:#f7f7fb}
+    header{background:linear-gradient(90deg,#00529B,#00A86B); color:#fff; padding:2rem}
+    .container{max-width:980px;margin:1.25rem auto;background:#fff;border-radius:12px;box-shadow:0 8px 30px rgba(8,15,30,0.06);overflow:hidden}
+    main{padding:1.5rem}
+    h1{margin:0 0 0.25rem;font-size:2rem}
+    h2{margin-top:1.25rem}
+    .lead{opacity:0.92}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:1rem}
+    .card{padding:1rem;border-radius:10px;background:#fff}
+    img{max-width:100%;border-radius:8px}
+    figure{margin:0}
+    figcaption{font-size:0.85rem;color:#555;margin-top:0.4rem}
+    footer{padding:1rem;text-align:center;color:#666;font-size:0.9rem}
+    .btn{display:inline-block;padding:0.6rem 0.9rem;border-radius:8px;background:#00529B;color:#fff;text-decoration:none}
+    @media (max-width:880px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <div style="max-width:980px;margin:0 auto;">
+      <h1>Fútbol: Pasión y Historia</h1>
+      <p class="lead">Una página creada como trabajo escolar: resumen histórico, reglas básicas, imágenes y una opinión personal.</p>
+    </div>
+  </header>
+
+  <div class="container">
+    <main>
+      <div class="grid">
+        <section>
+          <h2>¿Qué es el fútbol?</h2>
+          <p>El fútbol (o balompié) es un deporte de equipo jugado por dos equipos de once jugadores cada uno. Es, ampliamente, considerado el deporte más popular del mundo y cuenta con ligas y torneos en prácticamente todos los países.</p>
+
+          <h2>Breve historia</h2>
+          <p>Sus orígenes se remontan a juegos de balón históricos en Europa y otras culturas; la organización internacional moderna se formalizó con la creación de la FIFA en 1904, que a partir de entonces ha regulado y promovido el deporte a nivel mundial.</p>
+
+          <h2>Reglas básicas</h2>
+          <ul>
+            <li>Duración: 90 minutos (dos tiempos de 45 minutos) más tiempo añadido.</li>
+            <li>Número de jugadores: 11 por equipo en cancha.</li>
+            <li>Goles: el equipo que marque más goles gana el partido.</li>
+            <li>Fuera de juego: regla que impide que un jugador obtenga ventaja permaneciendo demasiado cerca de la portería contraria cuando se realiza el pase.</li>
+            <li>Sanciones: faltas, tarjetas amarilla/roja y penales según la gravedad.</li>
+          </ul>
+
+          <h2>Mi opinión</h2>
+          <p>Personalmente, creo que el fútbol combina técnica individual con trabajo colectivo de una manera única: un pase bien medido o una presión organizada pueden cambiar el curso de un partido. Además, la experiencia de un estadio lleno —el ruido, los cánticos— es insustituible y explica por qué mueve a millones alrededor del mundo.</p>
+
+          <h2>Recursos y créditos</h2>
+          <p>Imágenes de dominio público o con licencia Creative Commons provienen de Wikimedia Commons (ver pie de foto en cada imagen). Información general consultada en fuentes públicas sobre la FIFA y las reglas del fútbol.</p>
+        </section>
+
+        <aside>
+          <div class="card">
+            <h3>Galería</h3>
+
+            <figure>
+              <!-- Imagen 1: Wembley interior (Wikimedia Commons) -->
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Wembley_Stadium_interior.jpg" alt="Interior Wembley Stadium">
+              <figcaption>Wembley Stadium — Imagen: Wikimedia Commons (CC BY-SA).</figcaption>
+            </figure>
+
+            <hr>
+
+            <figure>
+              <!-- Imagen 2: Celebración (Brasil vs Serbia) -->
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Brazil_vs_Serbia_WC2022_Vinicius_Jr_and_serbian_players.jpg" alt="Celebración en partido internacional">
+              <figcaption>Celebración en partido internacional — Imagen: Wikimedia Commons (licencia según archivo).</figcaption>
+            </figure>
+
+            <hr>
+
+            <figure>
+              <!-- Imagen 3: Panorama Wembley (Wikimedia Commons) -->
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Wembley_Stadium_panorama_-_England_Vs_Italy_U21s.jpg" alt="Panorámica del estadio Wembley">
+              <figcaption>Panorámica estadio — Imagen: Wikimedia Commons (CC BY).</figcaption>
+            </figure>
+
+            <hr>
+
+            <p style="font-size:0.92rem;color:#444">¿Quieres publicar esta página? Descarga el HTML (guardar como <code>index.html</code>) y súbelo a GitHub Pages o Netlify. Si quieres, incluye aquí tu nombre, escuela y fecha para personalizarla.</p>
+            <a class="btn" href="#download" onclick="downloadHTML()">Descargar HTML</a>
+
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer>
+      <small>Trabajo escolar — Página generada con ayuda de ChatGPT. Imágenes: Wikimedia Commons.</small>
+    </footer>
+  </div>
+
+  <script>
+    function downloadHTML(){
+      const html = `<!doctype html>${document.documentElement.innerHTML}`;
+      const blob = new Blob([html],{type:'text/html'});
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'index.html';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+    }
+  </script>
+</body>
+</html>
