@@ -84,30 +84,15 @@
 
             <hr>
 
-            <p style="font-size:0.92rem;color:#444">¿Quieres publicar esta página? Descarga el HTML (guardar como <code>index.html</code>) y súbelo a GitHub Pages o Netlify. Si quieres, incluye aquí tu nombre, escuela y fecha para personalizarla.</p>
-            <a class="btn" href="#download" onclick="downloadHTML()">Descargar HTML</a>
-
-          </div>
-        </aside>
+            
       </div>
     </main>
 
     <footer>
-      <small>Trabajo escolar — Página generada con ayuda de ChatGPT. Imágenes: Wikimedia Commons.</small>
+      <small>trabajo hecho por valeria yaretzi meza vazquez</small>
     </footer>
   </div>
 
-  <script>
-    function downloadHTML(){
-      const html = `<!doctype html>${document.documentElement.innerHTML}`;
-      const blob = new Blob([html],{type:'text/html'});
-      const a = document.createElement('a');
-      a.href = URL.createObjectURL(blob);
-      a.download = 'index.html';
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-    }
-  </script>
+  
 </body>
 </html>
